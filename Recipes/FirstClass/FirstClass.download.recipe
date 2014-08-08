@@ -15,11 +15,13 @@
     <string>0.2.0</string>
     <key>Process</key>
     <array>
+	<dict>
+            <key>Processor</key>
+            <string>FirstClassURLProvider</string>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
-            	<key>url</key>
-            	<string>http://www.firstclass.com/Resources/MacDownload</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
