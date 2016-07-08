@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Identifier</key>
+        <string>local.jss.AdobeShockwavePlayer</string>
+        <key>Input</key>
+        <dict>
+                <key>CATEGORY</key>
+                <string>Testing</string>
+                <key>NAME</key>
+                <string>Adobe Shockwave</string>
+        </dict>
+        <key>ParentRecipe</key>
+        <string>com.github.sggr57a.pkg.AdobeShockwavePlayer</string>
+</dict>
+</plist>
+
+
