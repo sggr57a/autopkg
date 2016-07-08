@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest FirstClass disk image and makes a pkg.</string>
     <key>Identifier</key>
-    <string>com.github.sggr57a.pkg.FirstClass</string>
+    <string>com.github.sggr57a.pkg.firstclass</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.sggr57a.download.FirstClass</string>
+	<string>com.github.sggr57a.download.firstclass</string>
     <key>Process</key>
     <array>
         <dict>
