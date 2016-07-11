@@ -15,7 +15,7 @@ To use this recipe, you must accept the Oracle Binary Code License Agreement for
 http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 </string>
     <key>Identifier</key>
-    <string>com.github.sggr57a.pkg.OracleJava8</string>
+    <string>com.github.sggr57a.pkg.oraclejava8</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
