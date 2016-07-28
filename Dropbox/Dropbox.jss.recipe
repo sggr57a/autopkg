@@ -8,8 +8,6 @@
 	<string>com.github.sggr57a.jss.dropbox</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Dropbox</string>
 		<key>CATEGORY</key>
 		<string>Testing</string>
 	</dict>

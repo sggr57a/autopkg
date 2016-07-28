@@ -8,8 +8,6 @@
 	<string>com.github.sggr57a.jss.firstclass</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>FirstClass</string>
 		<key>CATEGORY</key>
 		<string>Testing</string>
 	</dict>
@@ -26,6 +24,8 @@
 				<string>%CATEGORY%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>version</key>
+				<string>%version%</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
