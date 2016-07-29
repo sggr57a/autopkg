@@ -8,6 +8,8 @@
 	<string>com.github.sggr57a.jss.adobereader</string>
 	<key>Input</key>
 	<dict>
+		<key>NAME</key>
+		<string>Adobe Reader</string>
 		<key>CATEGORY</key>
 		<string>Testing</string>
 	</dict>
