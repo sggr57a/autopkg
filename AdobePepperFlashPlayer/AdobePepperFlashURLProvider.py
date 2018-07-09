@@ -22,7 +22,7 @@ from xml.etree import ElementTree
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["AdobeFlashURLProvider"]
+__all__ = ["AdobePepperFlashURLProvider"]
 
 UPDATE_XML_URL = ("http://fpdownload2.macromedia.com/get/flashplayer/update"
 		  "/current/xml/version_en_mac_pep.xml")
@@ -30,7 +30,7 @@ UPDATE_XML_URL = ("http://fpdownload2.macromedia.com/get/flashplayer/update"
 DOWNLOAD_TEMPLATE_URL = ("https://fpdownload.adobe.com/"
                          "get/flashplayer/pdc/%s/install_flash_player_osx_ppapi.dmg")
 
-class AdobeFlashURLProvider(Processor):
+class AdobePepperFlashURLProvider(Processor):
     """Provides URL to the latest Adobe Pepper Flash Player release."""
     description = __doc__
     input_variables = {
@@ -96,6 +96,6 @@ class AdobeFlashURLProvider(Processor):
 
 
 if __name__ == '__main__':
-    PROCESSOR = AdobeFlashURLProvider()
+    PROCESSOR = AdobePepperFlashURLProvider()
     PROCESSOR.execute_shell()
 
