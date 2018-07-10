@@ -58,7 +58,7 @@
                 <key>pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/Google Earth %version%.pkg</string>
                 <key>source_pkg</key>
-                <string>%pathname%/Install Google Earth.pkg</string>
+                <string>%pathname%/Install Google Earth*.pkg</string>
             </dict>
         </dict>
     </array>
