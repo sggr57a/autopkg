@@ -23,7 +23,7 @@ from autopkglib import Processor, ProcessorError
 
 __all__ = ["HPPrinterDriversURLProvider"]
 
-update_url = ("ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials/")
+update_url = ("ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials")
 
 
 class HPPrinterDriversURLProvider(Processor):
@@ -44,7 +44,7 @@ class HPPrinterDriversURLProvider(Processor):
     __doc__ = description
     
 
-    def get_fc_url(self):
+    def get_hp_url(self):
 	'''Read in URL'''
 	try:
 	    f = urllib2.urlopen(update_url)
@@ -66,7 +66,7 @@ class HPPrinterDriversURLProvider(Processor):
         if "url" in self.env:
             self.output("Using input URL %s" % self.env["url"])
             return
-        self.env["url"] = self.get_fc_url()
+        self.env["url"] = self.get_hp_url()
         self.output("Found URL %s" % self.env["url"])
     
 
