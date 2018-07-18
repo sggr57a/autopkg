@@ -57,11 +57,11 @@ class HPPrinterDriversURLProvider(Processor):
 	'''Find all installers in URL'''
 	pkg = ''
 	hp_pkgs = []
-	for pkg in re.findall(r'(?:ftp://|www.).*?["]*hp-printer-essentials*', url_data):
-	    '''Print tag'''
+	for pkg in re.findall(r'(?:ftp://ftp).*?["]*hp-printer-essentials*', url_data):
+	    '''Print pkg'''
 	    if (pkg.endswith('.pkg')):
 	        print 'This download link contains a valid package: %s' % pkg
-		hp_pkgs.append(tag)
+		hp_pkgs.append(pkg)
  	return hp_pkgs
 
     def main(self):
