@@ -54,13 +54,15 @@ class HPPrinterDriversURLProvider(Processor):
             raise ProcessorError(
                 "Can't download %s: %s" % (update_url, e))	
 
-	'''Find installer in URL'''
-	tag = ''
-	for tag in re.findall(r'(?:ftp://|www.).*?["]*hp-printer-essentials*', url_data):
+	'''Find all installers in URL'''
+	pkg = ''
+	hp_pkgs = []
+	for pkg in re.findall(r'(?:ftp://|www.).*?["]*hp-printer-essentials*', url_data):
 	    '''Print tag'''
-	    if (tag.endswith('.pkg')):
-	        print 'This download link contains a valid package: %s' % tag
- 	return tag
+	    if (pkg.endswith('.pkg')):
+	        print 'This download link contains a valid package: %s' % pkg
+		hp_pkgs.append(tag)
+ 	return pkg
 
     def main(self):
 	'''Return a download URL for latest HP printer drivers'''
