@@ -62,7 +62,7 @@ class HPPrinterDriversURLProvider(Processor):
 	    if (pkg.endswith('.pkg')):
 	        print 'This download link contains a valid package: %s' % pkg
 		hp_pkgs.append(tag)
- 	return pkg
+ 	return hp_pkgs
 
     def main(self):
 	'''Return a download URL for latest HP printer drivers'''
