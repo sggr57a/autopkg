@@ -55,6 +55,7 @@ class HPPrinterDriversURLProvider(Processor):
                 "Can't download %s: %s" % (update_url, e))	
 
 	'''Find installer in URL'''
+	tag = ''
 	for tag in re.findall(r'(?:ftp://|www.).*?["]*essentials', url_data):
 	    '''Print tag'''
 	    if (tag.endswith('.pkg')):
