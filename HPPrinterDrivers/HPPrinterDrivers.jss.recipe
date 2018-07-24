@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.n8felton.download.HPPrinterDrivers</string>
+	<string>com.github.sggr57a.pkg.hpdrivers</string>
 	<key>Process</key>
 	<array>
 		<dict>
