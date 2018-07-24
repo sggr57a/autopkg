@@ -25,7 +25,7 @@
 				<key>prod_name</key>
 				<string>%NAME%</string>
 			 	<key>pkg_path</key>
-                                <string>%RECIPE_CACHE_DIR%/HPPrinterDrivers.pkg</string>
+                                <string>%RECIPE_CACHE_DIR%/downloads/HPPrinterDrivers.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
