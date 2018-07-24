@@ -24,8 +24,8 @@
 				<string>%CATEGORY%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
-				<key>version</key>
-				<string>%version%</string>
+			 	<key>pkg_path</key>
+                                <string>%RECIPE_CACHE_DIR%/HPPrinterDrivers.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
