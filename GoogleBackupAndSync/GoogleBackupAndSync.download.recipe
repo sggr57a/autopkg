@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest Google Backup and Sync disk image.</string>
     <key>Identifier</key>
-    <string>com.github.sggr57a.download.backupandsyncc</string>
+    <string>com.github.sggr57a.download.backupandsync</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
