@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Google Backup & Sync and makes a pkg of it then uploads it to the JSS.</string>
+	<string>Downloads the latest version of Google Backup and Sync and makes a pkg of it then uploads it to the JSS.</string>
 	<key>Identifier</key>
 	<string>com.github.sggr57a.jss.backupandsync</string>
 	<key>Input</key>
