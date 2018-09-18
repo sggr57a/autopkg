@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>Testin</string>
+		<string>Testing</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
