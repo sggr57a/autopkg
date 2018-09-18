@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Adobe's Creative Cloud Installer and packages it for installation.</string>
+	<string>Downloads the latest version of Adobe's Creative Cloud Installer and packages for installation.</string>
 	<key>Identifier</key>
 	<string>com.github.rtrouton.pkg.AdobeCreativeCloudInstaller</string>
 	<key>Input</key>
