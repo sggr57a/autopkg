@@ -15,7 +15,7 @@
         <key>OS_VERSION</key>
         <string>10.10.0</string>
 		<key>NAME</key>
-		<string>AdobeReaderDC</string>
+		<string>Adobe Reader DC</string>
 	</dict>
     <key>Process</key>
     <array>
