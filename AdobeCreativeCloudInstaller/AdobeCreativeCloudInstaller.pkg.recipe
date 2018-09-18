@@ -112,4 +112,4 @@ install_dir=$(dirname $0)
 		</dict>
 	</array>
 </dict>
-
+</plist>
