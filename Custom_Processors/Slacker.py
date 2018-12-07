@@ -29,8 +29,7 @@ __all__ = ["Slacker"]
 class Slacker(Processor):
     description = ("Posts to Slack via webhook based on output of a JSSImporter run. "
                     "Takes elements from " "https://gist.github.com/devStepsize/b1b795309a217d24566dcc0ad136f784"
-                    "and "
-                    "https://github.com/autopkg/nmcspadden-recipes/blob/master/PostProcessors/Yo.py")
+                    "and https://github.com/autopkg/nmcspadden-recipes/blob/master/PostProcessors/Yo.py")
     input_variables = {
         "JSS_URL": {
             "required": False,
