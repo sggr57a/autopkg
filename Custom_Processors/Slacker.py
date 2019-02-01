@@ -71,7 +71,8 @@ class Slacker(Processor):
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
         jss_changed_objects = self.env.get("jss_changed_objects")
-	jss_package_added = self.env.get("jss_package_added")
+#	jss_package_added = self.env.get("jss_package_added")
+	jss_package_updated = self.env.get("jss_package_updated")
         jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
 
@@ -85,11 +86,10 @@ class Slacker(Processor):
             print "Category: %s" % category
             print "Package: %s" % jss_uploaded_package
 
-            if jss_uploaded_package:
-                 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
-	    else:
+            if jss_package_updated:
 		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
-
+	    else:
+                 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
 
             slack_data = {'text': slack_text}
 
