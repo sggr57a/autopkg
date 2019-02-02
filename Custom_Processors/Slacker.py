@@ -82,14 +82,14 @@ class Slacker(Processor):
         policy_category = self.env.get("policy_category")
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
-	pkg_path = self.env.get("pkg_path")
-	package = self.env.get("package")
-	jss_repo_updated = self.env.get("jss_repo_updated")
-#        jss_changed_objects = self.env.get("jss_changed_objects")
+#	pkg_path = self.env.get("pkg_path")
+#	package = self.env.get("package")
+#	jss_repo_updated = self.env.get("jss_repo_updated")
+        jss_changed_objects = self.env.get("jss_changed_objects")
         jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
 
-        if package:
+        if jss_changed_objects:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
@@ -99,7 +99,7 @@ class Slacker(Processor):
             print "Category: %s" % category
             print "Package: %s" % jss_uploaded_package
 
-            if jss_uploaded_package:
+            if jss_uploaded_package is None:
 		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
 	    else:
                  slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
