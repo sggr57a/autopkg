@@ -45,8 +45,16 @@ class Slacker(Processor):
         },
         "prod_name": {
             "required": False,
-            "description": ("PROD_NAME")
+            "description": ("PROD_NAME.")
         },
+	"pkg_path": {
+	   "required": False,
+	   "description": ("Package Path.")
+	},
+	"jss_repo_updated": {
+	   "required": False,
+	   "description": ("Repo Updated.")
+	},
         "jss_changed_objects": {
             "required": False,
             "description": ("Dictionary of added or changed values.")
