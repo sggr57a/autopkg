@@ -79,6 +79,7 @@ class Slacker(Processor):
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
 	pkg_path = self.env.get("pkg_path")
+	jss_repo_updated = self.env.get("jss_repo_updated")
 #        jss_changed_objects = self.env.get("jss_changed_objects")
         jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
