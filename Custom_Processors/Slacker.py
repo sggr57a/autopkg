@@ -80,7 +80,7 @@ class Slacker(Processor):
 
 	webhook_url = self.env.get("webhook_url")
 
-	print "JSS CHANGED OBJECTS: %s" % jss_changed_objects
+	print "JSS PACKAGE DATA: %s" % jss_package_data
 #	print (jss_package_data.get("Package"))
 
         if jss_package_data is not None:
