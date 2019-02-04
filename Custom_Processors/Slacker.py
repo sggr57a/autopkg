@@ -72,7 +72,7 @@ class Slacker(Processor):
         prod_name = self.env.get("prod_name")
 
 	jss_changed_objects = self.env.get("jss_changed_objects")
-	jss_package_changes = self.env(jss_changes_objects["jss_package_added"] + jss_changed_objects["jss_package_updated"])
+	jss_package_changes = self.env(jss_changed_objects["jss_package_added"] + jss_changed_objects["jss_package_updated"])
 
 #	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
 #       jss_package_data = self.env.get(jss_importer_summary_result["data"]["Package"])
