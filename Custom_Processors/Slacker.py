@@ -74,8 +74,8 @@ class Slacker(Processor):
 	changes = self.env["jss_changed_objects"]
 	jss_package_changes = self.env(changes["jss_package_added"] + changes["jss_package_updated"])
 
-	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
-        jss_package_data = self.env.get["jss_importer_summary_result"]["data", "Package"]
+#	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
+#       jss_package_data = self.env.get(jss_importer_summary_result["data"]["Package"])
 
 	webhook_url = self.env.get("webhook_url")
 
