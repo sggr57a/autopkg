@@ -79,10 +79,10 @@ class Slacker(Processor):
 	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
 
-	print "%s" % jss_changed_objects
-	print "%s" % jss_package_added
+	print "JSS CHANGED OBJECTS: %s" % jss_changed_objects
+	print "JSS PACKAGE ADDED: %s" % jss_package_added
 
-        if jss_changed_objects is not "":
+        if jss_changed_objects is not "None":
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
