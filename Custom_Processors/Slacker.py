@@ -47,7 +47,7 @@ class Slacker(Processor):
             "required": False,
             "description": ("PROD_NAME.")
         },
-	"jss_package_added": {
+	"package_added": {
             "required": False,
             "description": ("Name of package added.")
         },
