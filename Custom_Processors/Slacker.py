@@ -51,7 +51,7 @@ class Slacker(Processor):
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
-        "jss_package_added": {
+        "jss_package_updated": {
 	    "required": False,
 	    "description": ("Packaged to be uploaded")
 	},
@@ -75,12 +75,12 @@ class Slacker(Processor):
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
         jss_changed_objects = self.env.get("jss_changed_objects")
-        jss_package_added = self.env.get("jss_package_added")
+        jss_package_updated = self.env.get("jss_package_updated")
 	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
 
 	print "JSS CHANGED OBJECTS: %s" % jss_changed_objects
-	print "JSS PACKAGE ADDED: %s" % jss_package_added
+	print "JSS PACKAGE UPDATED: %s" % jss_package_added
 
         if jss_changed_objects is not "None":
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
