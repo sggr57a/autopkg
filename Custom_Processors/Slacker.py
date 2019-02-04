@@ -47,22 +47,14 @@ class Slacker(Processor):
             "required": False,
             "description": ("PROD_NAME.")
         },
-	"pkg_path": {
-	   "required": False,
-	   "description": ("Package Path.")
-	},
-	"package": {
-	  "required": False,
-	  "description": ("Package")
-	},
-	"jss_repo_updated": {
-	   "required": False,
-	   "description": ("Repo Updated.")
-	},
         "jss_changed_objects": {
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
+	"package": {
+	   "required": False,
+	   "description": ("Dictionay of changed package values.")
+	},
         "jss_importer_summary_result": {
             "required": False,
             "description": ("Description of interesting results.")
@@ -82,11 +74,12 @@ class Slacker(Processor):
         policy_category = self.env.get("policy_category")
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
+	package = selv.env.get("package")
         jss_changed_objects = self.env.get("jss_changed_objects")
         jss_importer_summary_result = self.env.get("jss_importer_summary_result")
         webhook_url = self.env.get("webhook_url")
 
-        if jss_changed_objects is not "":
+        if package is not None:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
