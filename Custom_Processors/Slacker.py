@@ -89,7 +89,7 @@ class Slacker(Processor):
             print "Category: %s" % category
             print "Package: %s" % jss_uploaded_package
 
-            if jss_importer_summary_result["data"]["jss_package_added"] is not "":
+            if self.get_report_string(["jss_package_added"]) is not "":
 		 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
 	    else:
 		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
