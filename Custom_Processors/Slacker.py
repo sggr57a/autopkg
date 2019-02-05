@@ -78,7 +78,7 @@ class Slacker(Processor):
 	print "CHANGED OBJECTS: %s" % jss_changed_objects
 	print "REPO UPDATED: %s" % jss_repo_updated
 
-	if jss_changed_objects["jss_repo_updated"] is not None::
+	if jss_changed_objects["jss_repo_updated"] is not None:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
