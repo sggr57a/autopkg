@@ -76,7 +76,8 @@ class Slacker(Processor):
 	webhook_url = self.env.get("webhook_url")
 	
 	print "CHANGED OBJECTS: %s" % jss_changed_objects
-	
+	print jss_repo_updated.count("u")	
+
 	if jss_changed_objects:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
