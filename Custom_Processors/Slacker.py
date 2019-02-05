@@ -78,7 +78,7 @@ class Slacker(Processor):
 	print "CHANGED OBJECTS: %s" % jss_changed_objects
 	print "REPO UPDATED: %s" % jss_repo_updated
 
-	if jss_changed_objects:
+	if jss_changed_objects["jss_repo_updated"] is not None::
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
@@ -88,10 +88,10 @@ class Slacker(Processor):
             print "Category: %s" % category
             print "Package: %s" % jss_uploaded_package
 
-            if jss_changed_objects["jss_repo_updated"] is not None:
+            if jss_uploaded_package:
 		 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
-	    else:
-		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
+#	    else:
+#		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
 
             slack_data = {'text': slack_text}
 
