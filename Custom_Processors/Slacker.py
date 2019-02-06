@@ -51,9 +51,9 @@ class Slacker(Processor):
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
-	"package": {
+	"data": {
             "required": False,
-            "description": ("Package name.")
+            "description": ("Dictionary of package values.")
         },
         "jss_importer_summary_result": {
             "required": False,
