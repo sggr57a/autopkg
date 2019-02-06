@@ -37,19 +37,15 @@ class Slacker(Processor):
         },
         "policy_category": {
             "required": False,
-            "description": ("Policy category.")
+            "description": ("Policy Category.")
         },
         "category": {
             "required": False,
-            "description": ("Package category.")
+            "description": ("Package Category.")
         },
         "prod_name": {
             "required": False,
             "description": ("PROD_NAME.")
-        },
-	"jss_package_added": {
-            "required": False,
-            "description": ("Package added.")
         },
         "jss_changed_objects": {
             "required": False,
@@ -74,15 +70,11 @@ class Slacker(Processor):
         policy_category = self.env.get("policy_category")
         category = self.env.get("category")
         prod_name = self.env.get("prod_name")
-	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
-	jss_changed_objects = self.env.get("jss_changed_objects")
-	jss_repo_updated = self.env.get("jss_repo_updated")
-	jss_package_added = self.env.get("jss_package_added")
-	webhook_url = self.env.get("webhook_url")
-	
-	print "CHANGES: %s" % jss_changed_objects 
+        jss_changed_objects = self.env.get("jss_changed_objects")
+        jss_importer_summary_result = self.env.get("jss_importer_summary_result")
+        webhook_url = self.env.get("webhook_url")
 
-	if jss_changed_objects["jss_repo_updated"]:
+        if jss_changed_objects is not "":
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
             jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
@@ -90,10 +82,12 @@ class Slacker(Processor):
             print "Title: %s" % prod_name
             print "Version: %s" % jss_policy_version
             print "Category: %s" % category
-            print "Package: %s" % jss_uploaded_added
+            print "Package: %s" % jss_uploaded_package
 
-            if jss_package_added:
+            if jss_uploaded_package:
 		 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
+	    else:
+		 slack_text = "*No new items have been added to the JSS*\nURL: %s\nTitle: %s" % (JSS_URL, prod_name)
 
             slack_data = {'text': slack_text}
 
