@@ -77,7 +77,7 @@ class Slacker(Processor):
 	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
 	jss_changed_objects = self.env.get("jss_changed_objects")
 	jss_repo_updated = self.env.get("jss_repo_updated")
-	jss_package_name = self.env.get("pkg_name")
+	jss_package_name = self.env.get("pkg_update")
 	webhook_url = self.env.get("webhook_url")
 	
 	print "CHANGES: %s" % jss_changed_objects 
