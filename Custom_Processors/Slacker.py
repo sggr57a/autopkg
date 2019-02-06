@@ -51,10 +51,6 @@ class Slacker(Processor):
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
-	"pkg_update": {
-            "required": False,
-            "description": ("Package name.")
-        },
         "jss_importer_summary_result": {
             "required": False,
             "description": ("Description of interesting results.")
@@ -77,7 +73,6 @@ class Slacker(Processor):
 	jss_importer_summary_result = self.env.get("jss_importer_summary_result")
 	jss_changed_objects = self.env.get("jss_changed_objects")
 	jss_repo_updated = self.env.get("jss_repo_updated")
-#	jss_package_name = self.env.get("pkg_update")
 	jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
 	webhook_url = self.env.get("webhook_url")
 	
@@ -87,7 +82,7 @@ class Slacker(Processor):
 	if jss_changed_objects["jss_repo_updated"]:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
             jss_policy_version = "%s" % jss_importer_summary_result["data"]["Version"]
-            jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
+#            jss_uploaded_package = "%s" % jss_importer_summary_result["data"]["Package"]
             print "JSS address: %s" % JSS_URL
             print "Title: %s" % prod_name
             print "Version: %s" % jss_policy_version
