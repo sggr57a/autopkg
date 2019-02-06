@@ -81,7 +81,7 @@ class Slacker(Processor):
 	webhook_url = self.env.get("webhook_url")
 	
 	print "CHANGES: %s" % jss_changed_objects 
-	print "PACKAGE: %s" % pkg_name
+	print "PACKAGE: %s" % jss_package_name
 
 	if jss_changed_objects["jss_repo_updated"]:
             jss_policy_name = "%s" % jss_importer_summary_result["data"]["Policy"]
