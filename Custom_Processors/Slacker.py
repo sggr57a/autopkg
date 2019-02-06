@@ -51,6 +51,10 @@ class Slacker(Processor):
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
+	"jss_package_added": {
+            "required": False,
+            "description": ("Package added.")
+        },
         "jss_importer_summary_result": {
             "required": False,
             "description": ("Description of interesting results.")
@@ -85,7 +89,7 @@ class Slacker(Processor):
             print "Title: %s" % prod_name
             print "Version: %s" % jss_policy_version
             print "Category: %s" % category
-            print "Package: %s" % jss_uploaded_package
+            print "Package: %s" % jss_package_added
 
             if jss_uploaded_package:
 		 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
