@@ -51,7 +51,7 @@ class Slacker(Processor):
             "required": False,
             "description": ("Dictionary of added or changed values.")
         },
-	"jss_package_name": {
+	"pkg_update": {
             "required": False,
             "description": ("Package name.")
         },
