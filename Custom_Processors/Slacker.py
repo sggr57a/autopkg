@@ -87,7 +87,6 @@ class Slacker(Processor):
             print "Package: %s" % jss_uploaded_package
 
             if jss_uploaded_package:
-#                slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*" % (JSS_URL, prod_name, jss_policy_version, category)
                 slack_text = "*New Item added to JSS*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nUploaded Package Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_uploaded_package)
 
             slack_data = {'text': slack_text}
