@@ -9,9 +9,9 @@
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>OpenJDK12</string>
+         <string>OpenJDK 12</string>
          <key>VENDOR</key>
-         <string>Oracle</string>
+         <string>OpenJDK12</string>
          <key>SOFTWARETITLE</key>
          <string>Java</string>
          <key>SOFTWARETYPE</key>
