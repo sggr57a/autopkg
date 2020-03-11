@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest FirstClass disk image and makes a pkg.</string>
+    <string>Downloads latest HP printer drivers package.</string>
     <key>Identifier</key>
     <string>com.github.sggr57a.pkg.hpdrivers</string>
     <key>Input</key>
@@ -36,7 +36,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/expanded/com.hp.print.ps.support.192100.cpe.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/expanded/hp-printer-essentials-S.version.pkg/Payload</string>
             </dict>
         </dict>
 	<dict>
