@@ -118,7 +118,7 @@ exit 0</string>
                <key>pkg_request</key>
                <dict>
                   <key>pkgname</key>
-                  <string>%VENDOR%-%version%</string>
+                  <string>%VENDOR% %version%</string>
                   <key>version</key>
                   <string>%version%</string>
                   <key>id</key>
