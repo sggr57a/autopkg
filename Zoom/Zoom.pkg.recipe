@@ -89,7 +89,7 @@
 					<key>pkgname</key>
 					<string>%NAME% %version%</string>
 					<key>scripts</key>
-					<string>scripts</string>
+					<string>%RECIPE_CACHE_DIR%/expanded/zoomus.pkg/Scripts</string>
 					<key>version</key>
 					<string>%version%</string>
 				</dict>
