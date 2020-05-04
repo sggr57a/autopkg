@@ -48,7 +48,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/zoom.us.app/</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/zoom.us.app/zoom.us.app/</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/zoomus.pkg/Payload</string>
 			</dict>
@@ -59,7 +59,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/zoom.us.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/zoom.us.app/zoom.us.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleVersion</string>
 			</dict>
